@@ -12,13 +12,14 @@ import java.util.List;
 @RestController
 @RequestMapping(value="api/v1")
 public class UserController {
+
     private UserService userService;
     public UserController(UserService userService)
     {
         this.userService=userService;
     }
- //   @PostMapping("user")
-    @RequestMapping(value="user",method = RequestMethod.POST)
+
+    @PostMapping("user")
     public ResponseEntity<?> saveUser(@RequestBody User user)
     {
         ResponseEntity responseEntity;
